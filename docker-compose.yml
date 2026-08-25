@@ -1,0 +1,17 @@
+services:
+  ravendb:
+    image: ravendb/ravendb:latest
+    container_name: leadsoft-ravendb
+    ports:
+      - "8080:8080"
+      - "38888:38888"
+    environment:
+      - RAVEN_Setup_Mode=None
+      - RAVEN_License_Eula_Accepted=true
+      - RAVEN_Security_UnsecuredAccessAllowed=PrivateNetwork
+    volumes:
+      - ravendb_data:/opt/RavenDB/Server/RavenData
+
+volumes:
+  ravendb_data:
+    driver: local
