@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-night: #080b14;
+  --color-deep: #030817;
+  --color-surface: #14151a;
+  --color-surface-raised: #171a24;
+  --color-cyan: #05b8f5;
+  --color-electric: #175dff;
+  --color-muted: #a5adbf;
+  --color-divider: #303544;
+  --font-mono: "Roboto Mono", Consolas, "Courier New", monospace;
+  --font-display: Orbitron, "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body {
+  margin: 0;
+  background: #080b14;
+  color: #f5f7fb;
+  font-family: "Roboto Mono", Consolas, "Courier New", monospace;
+  -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; }
+@theme {
+  --animate-whatsapp-rise: whatsapp-rise 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes whatsapp-rise {
+    0% { opacity: 0; transform: translateY(30px) scale(0.88); }
+    68% { opacity: 1; transform: translateY(-4px) scale(1.03); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+::selection { background: #05b8f5; color: #080b14; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
