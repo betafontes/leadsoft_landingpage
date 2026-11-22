@@ -50,13 +50,13 @@ export function PortfolioSection() {
 
   return (
     <section className="bg-surface px-5 py-[70px] md:px-0 md:py-[93px]" id="portfolio">
-      <div className="mx-auto mb-6 flex max-w-[1220px] items-end justify-between gap-3 md:mb-8 md:w-[calc(100%-72px)]">
+      <div className="mx-auto mb-6 flex max-w-[1220px] flex-col items-start justify-between gap-4 sm:flex-row sm:items-end md:mb-8 md:w-[calc(100%-72px)]">
         <div>
           <p className="mb-3 text-[11px] font-bold tracking-[2px] text-cyan md:text-[12px]">ALGUNS PROJETOS</p>
           <h2 className="font-display text-[35px] font-semibold md:text-[45px]">Ideias em órbita.</h2>
         </div>
-        <a className="mb-1 inline-flex items-center gap-1.5 border-b border-cyan/60 pb-2 text-[11px] text-sky-300 transition-all hover:gap-3 md:gap-3 md:text-[13px]" href="https://www.behance.net/leadsofsolue/" target="_blank" rel="noreferrer">
-          Veja mais projetos <span>↗</span>
+        <a className="group mb-1 inline-flex items-center gap-1.5 border-b border-cyan/60 pb-2 text-[11px] text-sky-300 transition-all duration-500 ease-in-out hover:gap-3 md:gap-3 md:text-[13px]" href="https://www.behance.net/leadsofsolue/" target="_blank" rel="noreferrer">
+          Veja mais projetos <span className="inline-block transition-transform duration-500 ease-in-out group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
         </a>
       </div>
 
@@ -67,9 +67,9 @@ export function PortfolioSection() {
           ref={railRef}
         >
           {projects.map((project) => (
-            <div className="w-[calc((100%-10px)/2)] flex-none snap-start overflow-hidden rounded-lg border border-white/10 bg-black shadow-[0_12px_32px_#0006] md:w-[calc((100%-54px)/4)]" key={project.projectId}>
+            <div className="w-full flex-none snap-start sm:w-[calc((100%-10px)/2)] xl:w-[calc((100%-54px)/4)] overflow-hidden rounded-lg border border-white/10 bg-black shadow-[0_12px_32px_#0006]" key={project.projectId}>
               <iframe
-                className="h-[260px] w-full border-0 md:h-[316px]"
+                className="h-[280px] w-full border-0 sm:h-[316px]"
                 src={`https://www.behance.net/embed/project/${project.projectId}?ilo0=1`}
                 title={project.name}
                 loading="lazy"
@@ -84,7 +84,7 @@ export function PortfolioSection() {
         {canScrollLeft && (
           <button
             aria-label="Rolar projetos para a esquerda"
-            className="absolute left-2 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-white/40 bg-night/80 text-3xl text-white shadow-lg backdrop-blur transition-colors hover:bg-cyan hover:text-night md:-left-5 md:size-12"
+            className="absolute left-2 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-white/40 bg-night/80 text-3xl text-white shadow-lg backdrop-blur transition-colors duration-500 ease-in-out hover:bg-cyan hover:text-night md:-left-5 md:size-12"
             onClick={() => scroll("left")}
             type="button"
           >
@@ -94,7 +94,7 @@ export function PortfolioSection() {
         {canScrollRight && (
           <button
             aria-label="Rolar projetos para a direita"
-            className="absolute right-2 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-white/40 bg-night/80 text-3xl text-white shadow-lg backdrop-blur transition-colors hover:bg-cyan hover:text-night md:-right-5 md:size-12"
+            className="absolute right-2 top-1/2 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-white/40 bg-night/80 text-3xl text-white shadow-lg backdrop-blur transition-colors duration-500 ease-in-out hover:bg-cyan hover:text-night md:-right-5 md:size-12"
             onClick={() => scroll("right")}
             type="button"
           >

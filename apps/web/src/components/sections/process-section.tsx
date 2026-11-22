@@ -18,16 +18,16 @@ export function ProcessSection() {
             Para criar soluções inteligentes e inovadoras, seguimos etapas que mantêm todo mundo na mesma trajetória.
           </p>
         </div>
-        <div className="grid grid-cols-2 border-y border-divider md:grid-cols-4">
+        <div className="grid grid-cols-1 border-y sm:grid-cols-2 xl:grid-cols-4 border-divider">
           {stages.map((stage, index) => (
             <article
-              className={index % 2 === 0 ? "relative min-h-[194px] border-b border-r border-divider p-5 md:min-h-[226px] md:border-b-0 md:p-7" : "relative min-h-[194px] border-b border-divider p-5 md:min-h-[226px] md:border-b-0 md:border-r md:border-divider md:p-7"}
+              className={`relative min-h-[168px] border-b border-divider p-4 sm:min-h-[194px] sm:p-5 xl:min-h-[226px] xl:border-b-0 xl:p-7 ${index % 2 === 0 ? "sm:border-r" : "xl:border-r-0"}`}
               key={stage.number}
             >
-              <span className="text-[11px] tracking-[1.5px] text-cyan md:text-xs">{stage.number}</span>
+              <span className="text-[11px] tracking-[1.5px] text-cyan sm:text-xs">{stage.number}</span>
               <span className="absolute right-4 top-4 text-[17px] text-blue-400 md:text-lg">✳</span>
-              <h3 className="mb-2 mt-8 font-display text-[18px] font-medium md:mb-3 md:mt-11 md:text-[22px]">{stage.title}</h3>
-              <p className="text-[11px] leading-relaxed text-slate-300 md:text-[12px]">{stage.description}</p>
+              <h3 className="mb-2 mt-8 font-display text-[18px] font-medium sm:mb-3 sm:mt-10 sm:text-[20px] xl:mt-11 xl:text-[22px]">{stage.title}</h3>
+              <p className="text-[11px] leading-relaxed text-slate-300 sm:text-[12px]">{stage.description}</p>
             </article>
           ))}
         </div>

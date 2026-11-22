@@ -11,7 +11,7 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-x-clip">
       <SiteHeader />
       <HeroSection />
       <ServicesSection />
