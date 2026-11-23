@@ -3,7 +3,7 @@ type BrandProps = { footer?: boolean };
 export function Brand({ footer = false }: BrandProps) {
   return (
     <a
-      href="#inicio"
+      href="/#inicio"
       aria-label="LeadSoft, início"
       className="flex w-fit flex-col items-start transition-opacity hover:opacity-80"
     >

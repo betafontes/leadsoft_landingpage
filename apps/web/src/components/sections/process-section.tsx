@@ -9,7 +9,7 @@ export function ProcessSection() {
   return (
     <section className="bg-gradient-to-b from-surface-raised to-night px-5 py-[69px] md:px-0 md:py-[95px]" id="processo">
       <div className="mx-auto max-w-[1220px] md:w-[calc(100%-72px)]">
-        <div className="mx-auto mb-7 max-w-[610px] text-center md:mb-12">
+        <div className="mx-auto mb-7 max-w-[610px] text-center md:mb-12" data-reveal-sequence>
           <p className="mb-4 text-[11px] font-bold tracking-[2px] text-cyan md:text-[12px]">NOSSA JORNADA</p>
           <h2 className="mb-4 font-display text-[35px] font-semibold leading-tight tracking-tight md:text-[clamp(35px,4vw,50px)]">
             Um processo claro.<br /><span className="text-cyan">Uma parceria de verdade.</span>
@@ -18,7 +18,7 @@ export function ProcessSection() {
             Para criar soluções inteligentes e inovadoras, seguimos etapas que mantêm todo mundo na mesma trajetória.
           </p>
         </div>
-        <div className="grid grid-cols-1 border-y sm:grid-cols-2 xl:grid-cols-4 border-divider">
+        <div className="grid grid-cols-1 border-y sm:grid-cols-2 xl:grid-cols-4 border-divider" data-reveal-sequence>
           {stages.map((stage, index) => (
             <article
               className={`relative min-h-[168px] border-b border-divider p-4 sm:min-h-[194px] sm:p-5 xl:min-h-[226px] xl:border-b-0 xl:p-7 ${index % 2 === 0 ? "sm:border-r" : "xl:border-r-0"}`}

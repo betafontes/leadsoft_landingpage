@@ -1,17 +1,17 @@
 import { Brand } from "@/components/brand";
 
 const footerLinks = [
-  { label: "Empresa", href: "#empresa" },
-  { label: "Para Você", href: "#solucoes" },
-  { label: "Trabalhe Conosco", href: "#carreira" },
-  { label: "RavenDB", href: "#ravendb" },
+  { label: "Empresa", href: "/#empresa" },
+  { label: "Para Você", href: "/#solucoes" },
+  { label: "Trabalhe Conosco", href: "/carreira" },
+  { label: "RavenDB", href: "/#ravendb" },
   { label: "Política de Privacidade ↗", href: "https://www.leadsoft.inf.br/Politica_de_Privacidade_LeadSoft.pdf", external: true },
 ];
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-white/[0.07] bg-[#05070b]" id="contato">
-      <div className="mx-auto grid grid-cols-2 gap-x-5 gap-y-8 max-w-[1220px] px-5 py-9 md:w-[calc(100%-72px)] md:grid-cols-[1.05fr_1fr_0.95fr] md:gap-12 md:py-11">
+      <div className="mx-auto grid grid-cols-2 gap-x-5 gap-y-8 max-w-[1220px] px-5 py-9 md:w-[calc(100%-72px)] md:grid-cols-[1.05fr_1fr_0.95fr] md:gap-12 md:py-11" data-reveal-sequence>
         <div className="col-span-2 flex flex-col items-start md:col-span-1">
           <Brand footer />
           <p className="mt-4 max-w-[230px] text-[12px] leading-relaxed text-slate-400">
@@ -47,10 +47,10 @@ export function SiteFooter() {
         </nav>
       </div>
 
-      <div className="mx-auto flex max-w-[1220px] flex-col gap-3 border-t border-white/[0.07] px-5 py-4 text-[11px] text-slate-400 sm:flex-row sm:items-center sm:justify-between md:w-[calc(100%-72px)] md:px-0">
+      <div className="mx-auto flex max-w-[1220px] flex-col gap-3 border-t border-white/[0.07] px-5 py-4 text-[11px] text-slate-400 sm:flex-row sm:items-center sm:justify-between md:w-[calc(100%-72px)] md:px-0" data-reveal-sequence>
         <span className="font-medium"><b className="mr-1.5 text-sm text-cyan">λ</b>LeadSoft® Soluções Web</span>
         <span>© 2018–{new Date().getFullYear()} LeadSoft. Todos os direitos reservados.</span>
-        <a className="w-fit text-[11px] font-semibold tracking-[1px] text-slate-300 transition-colors duration-500 ease-in-out hover:text-cyan" href="#inicio">VOLTAR AO TOPO ↑</a>
+        <a className="w-fit text-[11px] font-semibold tracking-[1px] text-slate-300 transition-colors duration-500 ease-in-out hover:text-cyan" href="/#inicio">VOLTAR AO TOPO ↑</a>
       </div>
     </footer>
   );

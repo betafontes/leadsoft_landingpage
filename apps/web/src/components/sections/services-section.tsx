@@ -1,6 +1,7 @@
 const services = [
   {
     index: "01 / TIMES SOB MEDIDA",
+    href: "/solucoes#taas",
     title: "TaaS — Team as a Service",
     description: "Impulsione seu negócio com soluções de software sob medida. Tenha acesso a um time completo à sua disposição, sem a burocracia, os riscos ou o modelo engessado dos projetos tradicionais.",
     image: "https://www.leadsoft.inf.br/_next/static/media/Sistema-Web.75671c75.jpg",
@@ -8,6 +9,7 @@ const services = [
   },
   {
     index: "02 / IMERSÃO TECH",
+    href: "/solucoes#consultoria-tech",
     title: "Consultoria Tech",
     description: "O diagnóstico é o primeiro passo para traçar um plano de ação estratégico para as necessidades da sua empresa. Conheça nossa consultoria e descubra novas possibilidades.",
     image: "https://www.leadsoft.inf.br/_next/static/media/Consultoria-Tecnol%C3%B3gica.ee46f541.jpg",
@@ -24,7 +26,7 @@ function ServiceCard({ service }: { service: (typeof services)[number] }) {
         <span className="self-start text-left text-[8px] tracking-[1.6px] text-blue-50/80">{service.index}</span>
         <h3 className="mt-4 font-display text-[clamp(22px,2.5vw,27px)] font-medium leading-tight text-white drop-shadow">{service.title}</h3>
         <p className="mb-4 mt-3 max-w-[390px] text-[12px] font-medium leading-relaxed text-white md:text-[13px]">{service.description}</p>
-        <a className="mt-auto inline-flex min-h-[46px] items-center gap-3 rounded-full bg-white px-6 font-display text-sm font-bold text-blue-600 transition-colors duration-500 ease-in-out hover:bg-sky-50" href="https://www.leadsoft.inf.br/softwarehouse/solucoes" target="_blank" rel="noreferrer">
+        <a className="mt-auto inline-flex min-h-[46px] items-center gap-3 rounded-full bg-white px-6 font-display text-sm font-bold text-blue-600 transition-colors duration-500 ease-in-out hover:bg-sky-50" href={service.href}>
           Saiba mais <span className="text-base">↗</span>
         </a>
       </div>
@@ -35,7 +37,7 @@ function ServiceCard({ service }: { service: (typeof services)[number] }) {
 export function ServicesSection() {
   return (
     <section className="bg-surface px-0 py-[68px] md:py-[92px]" id="solucoes">
-      <div className="mx-auto mb-6 flex w-[calc(100%-40px)] max-w-[1220px] flex-col justify-between gap-4 lg:mb-[34px] lg:w-[calc(100%-72px)] lg:flex-row lg:items-end">
+      <div className="mx-auto mb-6 flex w-[calc(100%-40px)] max-w-[1220px] flex-col justify-between gap-4 lg:mb-[34px] lg:w-[calc(100%-72px)] lg:flex-row lg:items-end" data-reveal-sequence>
         <div>
           <p className="mb-4 text-[11px] font-bold tracking-[2px] text-cyan md:text-[12px]">PARA VOCÊ</p>
           <h2 className="font-display text-[35px] font-semibold leading-tight tracking-tight text-white md:text-[clamp(35px,4vw,50px)]">
@@ -46,7 +48,7 @@ export function ServicesSection() {
           Times e soluções construídos para as necessidades de cada negócio.
         </p>
       </div>
-      <div className="mx-auto grid w-[calc(100%-30px)] max-w-[920px] gap-3 sm:w-[calc(100%-40px)] sm:grid-cols-2 sm:gap-3 lg:w-[calc(100%-72px)] lg:gap-4">
+      <div className="mx-auto grid w-[calc(100%-30px)] max-w-[920px] gap-3 sm:w-[calc(100%-40px)] sm:grid-cols-2 sm:gap-3 lg:w-[calc(100%-72px)] lg:gap-4" data-reveal-sequence>
         {services.map((service) => <ServiceCard key={service.index} service={service} />)}
       </div>
     </section>

@@ -50,7 +50,7 @@ export function PortfolioSection() {
 
   return (
     <section className="bg-surface px-5 py-[70px] md:px-0 md:py-[93px]" id="portfolio">
-      <div className="mx-auto mb-6 flex max-w-[1220px] flex-col items-start justify-between gap-4 sm:flex-row sm:items-end md:mb-8 md:w-[calc(100%-72px)]">
+      <div className="mx-auto mb-6 flex max-w-[1220px] flex-col items-start justify-between gap-4 sm:flex-row sm:items-end md:mb-8 md:w-[calc(100%-72px)]" data-reveal-sequence>
         <div>
           <p className="mb-3 text-[11px] font-bold tracking-[2px] text-cyan md:text-[12px]">ALGUNS PROJETOS</p>
           <h2 className="font-display text-[35px] font-semibold md:text-[45px]">Ideias em órbita.</h2>
@@ -62,7 +62,7 @@ export function PortfolioSection() {
 
       <div className="relative mx-auto max-w-[1220px] md:w-[calc(100%-72px)]">
         <div
-          className="flex snap-x snap-mandatory gap-2.5 overflow-x-auto scroll-smooth [scrollbar-width:none] md:gap-[18px] [&::-webkit-scrollbar]:hidden"
+          className="flex snap-x snap-mandatory gap-2.5 overflow-x-auto scroll-smooth [scrollbar-width:none] md:gap-[18px] [&::-webkit-scrollbar]:hidden" data-reveal-sequence
           onScroll={updateArrows}
           ref={railRef}
         >

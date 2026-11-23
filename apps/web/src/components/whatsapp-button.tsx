@@ -26,7 +26,7 @@ export function WhatsAppButton() {
 
   return (
     <a
-      className={`fixed bottom-4 right-0 z-30 grid size-[48px] place-items-center bg-transparent transition-opacity duration-500 ease-out hover:scale-105 md:bottom-6 md:right-1 md:size-[56px] ${isVisible ? "animate-whatsapp-rise" : "pointer-events-none translate-y-5 scale-90 opacity-0"}`}
+      className={`fixed bottom-4 right-0 z-30 grid size-[44px] place-items-center bg-transparent transition-opacity duration-500 ease-out hover:scale-105 md:bottom-6 md:right-1 md:size-[52px] ${isVisible ? "animate-whatsapp-rise" : "pointer-events-none translate-y-5 scale-90 opacity-0"}`}
       href="https://wa.me/5541991777488"
       target="_blank"
       rel="noreferrer"
